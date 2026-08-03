@@ -1,0 +1,54 @@
+[33mcommit 54238f2598bc2a51660c851fa45207e3e6a6e803[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Diego Gómez <2833316742101@ingenieria.usac.edu.gt>
+Date:   Sun Aug 2 18:26:27 2026 -0600
+
+    Método values terminado
+
+[33mcommit 2b5f62da3745fcc06c3034887fdef3d8a97d3a18[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: 2ba3fc2 dd21125
+Author: Diego Gómez <2833316742101@ingenieria.usac.edu.gt>
+Date:   Sun Aug 2 17:43:28 2026 -0600
+
+    Merge branch 'main' of https://github.com/diegogolo/IPC1B_Tareas_DiegoG-mez_202501349
+
+[33mcommit 2ba3fc2e14ec74572b3acc0f9ca605a668697d99[m
+Author: Diego Gómez <2833316742101@ingenieria.usac.edu.gt>
+Date:   Sun Aug 2 17:41:30 2026 -0600
+
+    Validaciones
+
+[33mcommit 6e123a048e1edc0abbf0b377f9da20e2322168d0[m
+Author: Diego Gómez <2833316742101@ingenieria.usac.edu.gt>
+Date:   Sun Aug 2 16:56:26 2026 -0600
+
+    regresar
+
+[33mcommit 743ae296e351781aebbdad7fbb5307e9f39803fa[m
+Author: Diego Gómez <2833316742101@ingenieria.usac.edu.gt>
+Date:   Sun Aug 2 16:36:14 2026 -0600
+
+    Validación de datos
+
+[33mcommit d11b72a98d1946e3ac0e46bece4d028de9bd2e39[m
+Author: Diego Gómez <2833316742101@ingenieria.usac.edu.gt>
+Date:   Sun Aug 2 16:05:48 2026 -0600
+
+    Creacion del método ingresoDeNotas
+
+[33mcommit dd21125035090e78e3f2054c808f00530459eb20[m
+Author: Diego Gómez <2833316742101@ingenieria.usac.edu.gt>
+Date:   Sun Aug 2 14:02:24 2026 -0600
+
+    Create README.md
+
+[33mcommit 75b61790be5a110bbfac73ae4864b2f9f9662d8c[m
+Author: Diego Gómez <2833316742101@ingenieria.usac.edu.gt>
+Date:   Sun Aug 2 14:01:16 2026 -0600
+
+    Readme
+
+[33mcommit c3e7bc19f1fbd6f9efbbaf72f9e97ba705d232ff[m
+Author: Diego Gómez <2833316742101@ingenieria.usac.edu.gt>
+Date:   Sun Aug 2 13:57:27 2026 -0600
+
+    Creación del repo

@@ -4,7 +4,6 @@ public class Main {
     public static void main(String[] args) {
         Scanner read = new Scanner(System.in);
         int[] notas = new int[5];
-        double avg;
         int i = 0;
         System.out.println("Bienvenido al sistema de gestión de Calificaciones");
         ingresoDeDatos(read, notas, i);
@@ -46,11 +45,22 @@ public class Main {
     }
 
     static void values(int[] notas, int i){
-        for (i=0; i<4; i++) {
-            if (notas[i]<notas[i+1]){
-                notas[i] = notas[i+1];
+        int min = notas[0];
+        int may = notas[0];
+        for (i=0; i<5; i++) {
+            if (notas[i]> may) {
+                may = notas[i];
+            }
+            if (notas[i]<min){
+                min = notas[i];
             }
         }
-        System.out.println(notas[i]);
+        System.out.println("El número menor es "+min+" y el mayor es "+may);
+        int sum=0;
+        for (i=0; i<5; i++){
+            sum=sum+notas[i];
+        }
+        double avg=sum/5;
+        System.out.println("El promedio es "+avg);
     }
 }

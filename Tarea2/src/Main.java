@@ -56,7 +56,7 @@ public class Main {
                 min = notas[i];
             }
         }
-        System.out.println("El número menor es "+min+" y el mayor es "+may);
+        System.out.println("La nota menor es "+min+" y la mayor es "+may);
         int sum=0;
         for (i=0; i<5; i++){
             sum=sum+notas[i];
@@ -96,10 +96,14 @@ public class Main {
             }
         }
         for (i=0; i<2; i++){
+            if (i==1){
+                System.out.println(" ");
+            }
             for (j=0; j<5; j++){
                 System.out.print(assistance[i][j]+" | ");
             }
         }
+        System.out.println(" ");
         System.out.println("Promedio de las asistencias");
         int suma=0;
         double prom;

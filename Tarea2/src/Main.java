@@ -6,7 +6,7 @@ public class Main {
         Scanner read = new Scanner(System.in);
         int[] notas = new int[5];
         int i = 0;
-        System.out.println("Bienvenido al sistema de gestión de Calificaciones");
+        System.out.println("Bienvenido al Sistema de visualización de calificaciones");
         ingresoDeDatos(read, notas, i);
     }
 

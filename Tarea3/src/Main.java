@@ -67,12 +67,12 @@ public class Main{
                     hold=notas[j];
                     notas[j] = notas[j+1];
                     notas[j+1]=hold;
-                    names[i]=names[j];
+
                     holdname=names[j];
                     names[j]=names[j+1];
                     names[j+1]=holdname;
                     intercambiable=true;
-                }
+                }r
             }
             if (intercambiable=false) {
                 break;

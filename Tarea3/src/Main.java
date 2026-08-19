@@ -2,6 +2,8 @@ import java.io.*;
 import java.text.DecimalFormat;
 import java.util.InputMismatchException;
 import java.util.Scanner;
+import java.io.IOException;
+
 
 public class Main {
     private static final String[] names = new String[20];

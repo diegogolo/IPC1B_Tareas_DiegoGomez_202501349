@@ -1,3 +1,3 @@
-Diego,89
-Natanael Cano,89
-Yeyo,67
+Diego,26
+Kenny,89
+Yeyo,90

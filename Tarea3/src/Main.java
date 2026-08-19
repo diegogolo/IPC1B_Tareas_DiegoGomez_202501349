@@ -1,17 +1,16 @@
+import java.io.*;
 import java.text.DecimalFormat;
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import java.io.FileWriter;
-import java.io.BufferedWriter;
+
 public class Main {
-    private static final String[] names = new String[10];
-    private static final int[] notas = new int[10];
+    private static final String[] names = new String[20];
+    private static final int[] notas = new int[20];
     private static final Scanner read = new Scanner(System.in);
     private static int counter = 0;
     private static DecimalFormat fix2 = new DecimalFormat("#.00");
-
     public static void main(String[] args) {
-        int choice;
+        int choice=0;
         do {
             System.out.println("=== SISTEMA DE NOTAS ===");
             System.out.println("Ingresa una opción:");
@@ -21,8 +20,19 @@ public class Main {
             System.out.println("4 - Guardar datos en archivo");
             System.out.println("5 - Cargar datos desde archivo");
             System.out.println("6 - Salir");
-            choice = read.nextInt();
-            read.nextLine();
+           try{
+               choice = read.nextInt();
+               read.nextLine();
+               if(choice >6){
+                   throw new IllegalArgumentException("Opción fuera de rango");
+               }
+           }catch(InputMismatchException e){
+               System.out.println("Opción inválida, vuelve a intentarlo");
+               read.nextLine();
+               choice=0;
+           }catch(IllegalArgumentException e){
+               System.out.println("Opción fuera de rango");
+           }
             switch (choice) {
                 case 1:
                     agregarEstudiante();
@@ -34,7 +44,7 @@ public class Main {
                     showPromedio();
                     break;
                 case 4:
-                    System.out.println();
+                    saveStudents();
                     break;
                 case 5:
                     System.out.println();
@@ -108,5 +118,29 @@ public class Main {
         sumadeNotas = recursividad(0);
         promedio=sumadeNotas/counter;
         System.out.println("El promedio del grupo es: "+fix2.format(promedio));
+    }
+    public static void saveStudents(){
+        try{
+            BufferedWriter bw = new BufferedWriter(new FileWriter("notas.txt"));
+            for(int i=0;i<counter;i++){
+                bw.write(names[i]);
+                bw.write(",");
+                bw.write(String.valueOf(notas[i]));
+                bw.newLine();
+            }
+            bw.close();
+            System.out.println("Se guardaron los datos con éxito");
+
+        }catch(IOException e){
+            System.out.println("No se pudo guardar el archivo");
+        }
+    }
+    public static void readStudents(){
+        try{
+            BufferedReader br = new BufferedReader(new FileReader("notas.txt"));
+            
+        }catch(IOException e){
+            System.out.println("No se pudo leer el archivo");
+        }
     }
 }

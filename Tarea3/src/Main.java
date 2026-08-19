@@ -47,7 +47,7 @@ public class Main {
                     saveStudents();
                     break;
                 case 5:
-                    System.out.println();
+                    readStudents();
                     break;
             }
         } while (choice != 6);
@@ -69,8 +69,14 @@ public class Main {
         } catch (InputMismatchException e) {
             read.next();
             System.out.println("Nota no válida");
+            names[counter] = null;
+            notas[counter] = 0;
+            counter=counter-1;
         } catch (IllegalArgumentException e) {
             System.out.println("Valor fuera del rango (0-100)");
+            names[counter] = null;
+            notas[counter] = 0;
+            counter=counter-1;
         }
         counter++;
     }
@@ -138,7 +144,10 @@ public class Main {
     public static void readStudents(){
         try{
             BufferedReader br = new BufferedReader(new FileReader("notas.txt"));
-            
+            String show;
+            while ((show = br.readLine()) != null) {
+                System.out.println(show);
+            }
         }catch(IOException e){
             System.out.println("No se pudo leer el archivo");
         }

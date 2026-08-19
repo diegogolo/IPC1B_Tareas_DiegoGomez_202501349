@@ -149,12 +149,15 @@ public class Main {
         }
     }
     public static void readStudents(){
+        int students=0;
         try{
             BufferedReader br = new BufferedReader(new FileReader("notas.txt"));
             String show;
             while ((show = br.readLine()) != null) {
                 System.out.println(show);
+                students++;
             }
+            System.out.println("Se cargaron: "+students+" estudiantes");
         }catch(IOException e){
             System.out.println("No se pudo leer el archivo");
         }

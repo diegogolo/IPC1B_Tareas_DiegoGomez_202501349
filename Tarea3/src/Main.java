@@ -87,19 +87,19 @@ public class Main {
         for (int i = 0; i < counter; i++) {
             boolean intercambiable = false;
             for (int j = 0; j < counter - i - 1; j++) {
-                if (notas[j] > notas[j + 1]) {
-                    hold = notas[j];
-                    notas[j] = notas[j + 1];
-                    notas[j + 1] = hold;
+                if (notas[j] > notas[j + 1]) { //si la posición actual de notas es mayor que la j+1 se ejecuta el condicional.
+                    hold = notas[j];    //la variable hold toma la nota que está en la posición por la que va pasando el for
+                    notas[j] = notas[j + 1]; // luego la posición actual de notas se sobreescribe por la que tiene siguiente
+                    notas[j + 1] = hold; //luego la nota de la posición j+1 pasa a estar en la variable hold
 
-                    holdname = names[j];
+                    holdname = names[j];    // el mismo procedimiento es con los nombres, solo que en lugar de hold la variable se llama holdname
                     names[j] = names[j + 1];
                     names[j + 1] = holdname;
                     intercambiable = true;
                 }
             }
             if (intercambiable == false) {
-                break;
+                break;  // si la variable intercambiable (ya no se cumple el condicional) es falso sale del bucle.
             }
         }
         for (int i = 0; i < counter; i++) {
@@ -124,6 +124,13 @@ public class Main {
         sumadeNotas = recursividad(0);
         promedio=sumadeNotas/counter;
         System.out.println("El promedio del grupo es: "+fix2.format(promedio));
+
+        /*
+        Explicación: lo que hice aquí fue crear un método llamado "public static double recursividad", esto es debido a que el método debe tener un argumento
+        con el que se genera la recursividad, y no se puede hacer esto desde un void. Lo que hace el método es que el int declarado se va acumulando por cada pasada
+        entonces, si no se cumple el condicional retorna el valor de la nota más el mismo método pero con el contador sumándole 1. Cuando se cumpla el condicional retorna 0
+        indicando que ya se completó la suma y puede volver al método que lo llamó.
+         */
     }
     public static void saveStudents(){
         try{

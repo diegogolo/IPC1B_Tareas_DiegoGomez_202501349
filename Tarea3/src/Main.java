@@ -3,8 +3,6 @@ import java.text.DecimalFormat;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.io.IOException;
-
-
 public class Main {
     private static final String[] names = new String[20];
     private static final int[] notas = new int[20];
@@ -130,8 +128,8 @@ public class Main {
         /*
         Explicación: lo que hice aquí fue crear un método llamado "public static double recursividad", esto es debido a que el método debe tener un argumento
         con el que se genera la recursividad, y no se puede hacer esto desde un void. Lo que hace el método es que el int declarado se va acumulando por cada pasada
-        entonces, si no se cumple el condicional retorna el valor de la nota más el mismo método pero con el contador sumándole 1. Cuando se cumpla el condicional retorna 0
-        indicando que ya se completó la suma y puede volver al método que lo llamó.
+        entonces, si no se cumple el condicional retorna el valor de la nota más el mismo método pero con el contador sumándole 1. Cuando se cumpla el condicional
+        retorna 0 indicando que ya se completó la suma y puede volver al método que lo llamó.
          */
     }
     public static void saveStudents(){

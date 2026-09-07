@@ -5,7 +5,7 @@ public class Tareas {
     private int totaltareas = 0;
 
     public boolean asignacion(Tarea nueva){
-        if(totaltareas>tareas.length){
+        if(totaltareas>=tareas.length){
             return false;
         }
         for(int i= 0 ; i<totaltareas; i++){

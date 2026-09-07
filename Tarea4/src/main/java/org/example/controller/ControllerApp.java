@@ -1,12 +1,16 @@
 package org.example.controller;
+import org.example.model.Conversion;
 import org.example.model.Cursos;
 import org.example.model.Model;
+import org.example.model.Tareas;
 import org.example.view.MainFrame;
 import org.example.view.PanelAsignacionCursos;
 
 import javax.swing.*;
 
 public class ControllerApp {
+    private Tareas modelotareas;
+    private Conversion modeloconver;
     private Cursos modelocursos;
     private PanelAsignacionCursos viewCursos;
 
@@ -25,5 +29,5 @@ public class ControllerApp {
             JOptionPane.showMessageDialog(null,"Error de validación, debes llenar todos los campos");
         }
     }
-    int codigo;
+
 }

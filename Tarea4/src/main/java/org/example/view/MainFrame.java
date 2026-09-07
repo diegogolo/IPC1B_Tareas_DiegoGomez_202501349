@@ -6,6 +6,7 @@
 
     public class MainFrame extends JPanel {
         JFrame frame = new JFrame();
+        private PanelAsignacionCursos panelasignacioncursos;
         private ControllerApp controller;
         public void setController(ControllerApp controller){
             this.controller=controller;
@@ -16,6 +17,7 @@
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             frame.setLayout(new CardLayout());
             frame.add(new Menu(this), "Menu");
+            this.panelasignacioncursos=new PanelAsignacionCursos(this);
             frame.add(new PanelAsignacionCursos(this), "Asignación de cursos");
             frame.setVisible(true);
         }
@@ -23,7 +25,7 @@
             CardLayout cl = (CardLayout) frame.getContentPane().getLayout();
             cl.show(frame.getContentPane(), panel);
         }
-        public void showMensaje(String mensaje){
-            JOptionPane.showMessageDialog(frame,mensaje);
+        public PanelAsignacionCursos getPanelAsignacionCursos(){
+            return panelasignacioncursos;
         }
     }

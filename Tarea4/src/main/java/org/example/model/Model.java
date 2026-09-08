@@ -19,4 +19,10 @@ public class Model {
     public boolean buscarCurso(String codigo){
         return cursos.buscarCurso(codigo);
     }
+    public double farenheit(double temperatura){
+        return conversion.farenheit(temperatura);
+    }
+    public double kelvin(double temperatura){
+        return conversion.kelvin(temperatura);
+    }
 }

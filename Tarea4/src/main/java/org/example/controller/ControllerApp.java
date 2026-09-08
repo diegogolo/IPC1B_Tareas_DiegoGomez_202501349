@@ -68,4 +68,22 @@ public class ControllerApp {
             view.showMensaje("Rellena todos los campos");
         }
     }
+    public void conversionFaren(){
+        try{
+            double temperatura = view.getPanelConversiones().getTemperatura();
+            double farenheit = modelo.farenheit(temperatura);
+            view.showMensaje("Conversión a farenheit: "+farenheit+"°F");
+        }catch(NullPointerException e){
+            view.showMensaje("Llena el campo");
+        }
+    }
+    public void conversionKelvin(){
+        try{
+            double temperatura = view.getPanelConversiones().getTemperatura();
+            double kelvin = modelo.kelvin(temperatura);
+            view.showMensaje("Conversión a kelvin: "+kelvin+"°F");
+        }catch(NullPointerException e){
+            view.showMensaje("Llena el campo");
+        }
+    }
 }

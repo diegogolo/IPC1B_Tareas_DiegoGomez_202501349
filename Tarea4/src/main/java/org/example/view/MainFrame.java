@@ -8,6 +8,8 @@
         JFrame frame = new JFrame();
         private PanelAsignacionCursos panelasignacioncursos;
         private PanelTareas panelTareas;
+        private PanelConversiones panelConversiones;
+
         private ControllerApp controller;
         public void setController(ControllerApp controller){
             this.controller=controller;
@@ -22,6 +24,8 @@
             frame.add(this.panelasignacioncursos, "Asignación de cursos");
             this.panelTareas = new PanelTareas(this);
             frame.add(this.panelTareas, "Asignación de tareas");
+            this.panelConversiones=new PanelConversiones(this);
+            frame.add(this.panelConversiones, "Conversiones");
             frame.setVisible(true);
         }
         public void paneles(String panel){
@@ -37,6 +41,9 @@
         }
         public PanelTareas getPanelTareas(){
             return panelTareas;
+        }
+        public PanelConversiones getPanelConversiones(){
+            return panelConversiones;
         }
         public void showMensaje(String mensaje){
             JOptionPane.showMessageDialog(frame,mensaje);

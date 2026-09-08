@@ -13,4 +13,10 @@ public class Model {
     public boolean registrarCurso(Curso nuevo){
         return cursos.asignacion(nuevo);
     }
+    public boolean registrarTarea(Tarea nueva){
+        return tareas.asignacion(nueva);
+    }
+    public boolean buscarCurso(String codigo){
+        return cursos.buscarCurso(codigo);
+    }
 }

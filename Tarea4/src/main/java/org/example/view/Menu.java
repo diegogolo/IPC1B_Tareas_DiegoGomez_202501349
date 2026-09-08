@@ -16,7 +16,7 @@ public class Menu extends JPanel {
         add(Curso);
         JButton Tarea = new JButton("Agregar tarea");
         Tarea.addActionListener( e->{
-           mainframe.paneles("Agregar tarea");
+           mainframe.paneles("Asignación de tareas");
         });
         add(Tarea);
         JButton Conversiones = new JButton("Conversión de temperaturas");

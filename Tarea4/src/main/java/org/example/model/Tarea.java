@@ -4,7 +4,7 @@ public class Tarea {
     private String homework;
     private String descripcion;
     private String date;
-    private int code;
+    private String code;
 
     public String getHomework(){
         return homework;
@@ -24,10 +24,10 @@ public class Tarea {
     public void setDate(String fecha){
         this.date=fecha;
     }
-    public int getCode(){
+    public String getCode(){
         return code;
     }
-    public void setCode(int course_code){
+    public void setCode(String course_code){
         this.code=course_code;
     }
 }

@@ -2,7 +2,7 @@ package org.example.model;
 
 public class Curso {
     private String name;
-    private int course_code;
+    private String course_code;
     private String tutor_name;
 
     //setter y getters
@@ -12,10 +12,10 @@ public class Curso {
     public void setName(String name){
         this.name=name;
     }
-    public int getCode(){
+    public String getCode(){
         return course_code;
     }
-    public void setCode(int course_code){
+    public void setCode(String course_code){
         this.course_code=course_code;
     }
     public String getTutor(){

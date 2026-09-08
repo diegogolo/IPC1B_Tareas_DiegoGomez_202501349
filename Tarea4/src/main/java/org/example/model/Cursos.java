@@ -8,7 +8,7 @@ public class Cursos {
             return false;
         }
         for(int i=0;i<total;i++){
-            if(cursos[i].getCode()==nuevo.getCode()){
+            if(cursos[i].getCode().equals(nuevo.getCode())){
                 return false;
             }
         }
@@ -16,10 +16,13 @@ public class Cursos {
         total++;
         return true;
     }
-    public Curso[] getCursos(){
-        return cursos;
+    public boolean buscarCurso(String codigo){
+        for(int i =0; i<cursos.length; i++){
+            if(cursos[i].getCode().equals(codigo)){
+                return true;
+            }
+        }
+        return false;
     }
-    public int getTotal(){
-        return total;
-    }
+
 }

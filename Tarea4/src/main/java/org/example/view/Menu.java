@@ -7,7 +7,9 @@ public class Menu extends JPanel {
 
     public Menu(MainFrame mainframe){
         this.mainframe=mainframe;
+        setLayout(new GridLayout(4,1));
         JLabel bienvenida = new JLabel("Bienvenido");
+        bienvenida.setHorizontalAlignment(SwingConstants.CENTER);
         add(bienvenida);
         JButton Curso = new JButton("Agregar curso");
         Curso.addActionListener( e->{

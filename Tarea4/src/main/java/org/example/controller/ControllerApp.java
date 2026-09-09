@@ -10,7 +10,7 @@ import javax.swing.*;
 public class ControllerApp {
     Model modelo = new Model();
     MainFrame view = new MainFrame();
-    public static void main(String[] args){
+    public static    void main(String[] args){
         ControllerApp controller = new ControllerApp();
         controller.view.setController(controller);
     }
